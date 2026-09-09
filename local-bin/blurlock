@@ -1,0 +1,52 @@
+#!/bin/bash
+# Catppuccin Mocha themed lock screen using i3lock-color's native blur.
+# Lives in ~/.local/bin so it takes priority over /usr/bin/blurlock on $PATH.
+
+i3lock \
+  --blur 8 \
+  --clock \
+  --time-format "%H:%M" \
+  --date-format "%A, %d %B" \
+  --time-font "JetBrainsMono Nerd Font" \
+  --date-font "JetBrainsMono Nerd Font" \
+  --time-size 48 \
+  --date-size 16 \
+  --time-color=cdd6f4ff \
+  --date-color=a6adc8ff \
+  --screen 1 \
+  --ignore-empty-password \
+  --show-failed-attempts \
+  \
+  --insidever-color=1e1e2e00 \
+  --insidewrong-color=1e1e2e00 \
+  --inside-color=1e1e2e88 \
+  \
+  --ringver-color=a6e3a1ff \
+  --ringwrong-color=f38ba8ff \
+  --ring-color=45475aff \
+  --ring-width=4 \
+  \
+  --line-uses-ring \
+  \
+  --keyhl-color=89b4faff \
+  --bshl-color=f38ba8ff \
+  \
+  --separator-color=1e1e2e00 \
+  \
+  --verif-color=cdd6f4ff \
+  --wrong-color=f38ba8ff \
+  --modif-color=cdd6f4ff \
+  --layout-color=cdd6f4ff \
+  --greeter-color=cdd6f4ff \
+  \
+  --verif-text="" \
+  --wrong-text="Errado" \
+  --noinput-text="Sem entrada" \
+  --lock-text="Bloqueando..." \
+  --lockfailed-text="Falhou!" \
+  \
+  --radius=110 \
+  --pass-media-keys \
+  --pass-screen-keys \
+  --pass-power-keys \
+  "$@"

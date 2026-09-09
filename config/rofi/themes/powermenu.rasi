@@ -1,0 +1,50 @@
+/* Catppuccin Mocha - small power menu variant */
+
+* {
+    bg0:    #1e1e2ee6;
+    bg1:    #313244ff;
+    bg2:    #45475aff;
+    fg0:    #cdd6f4ff;
+    accent: #f38ba8ff;
+
+    background-color: transparent;
+    text-color:        @fg0;
+    font:               "JetBrainsMono Nerd Font 14";
+}
+
+window {
+    location: center;
+    anchor:   center;
+    width:    320px;
+    background-color: @bg0;
+    border:          2px;
+    border-color:    @accent;
+    border-radius:   16px;
+    padding:         16px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ listview ];
+}
+
+listview {
+    background-color: transparent;
+    columns:  1;
+    lines:    5;
+    spacing:  6px;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    text-color:         @fg0;
+    border-radius:      10px;
+    padding:            10px 12px;
+    horizontal-align:   0.5;
+}
+
+element selected {
+    background-color: @bg2;
+    text-color:         @accent;
+}

@@ -1,0 +1,97 @@
+/* Catppuccin Mocha - centered spotlight style, Omarchy-ish */
+
+* {
+    bg0:     #1e1e2ee6;
+    bg1:     #313244ff;
+    bg2:     #45475aff;
+    fg0:     #cdd6f4ff;
+    fg1:     #a6adc8ff;
+    accent:  #89b4faff;
+    accent2: #cba6f7ff;
+    urgent:  #f38ba8ff;
+
+    background-color: transparent;
+    text-color:        @fg0;
+    font:               "JetBrainsMono Nerd Font 12";
+}
+
+window {
+    location:        center;
+    anchor:          center;
+    width:           720px;
+    x-offset:        0px;
+    y-offset:        -120px;
+    background-color: @bg0;
+    border:          2px;
+    border-color:    @accent;
+    border-radius:   16px;
+    padding:         18px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+    spacing: 14px;
+}
+
+inputbar {
+    background-color: @bg1;
+    text-color:        @fg0;
+    border-radius:     12px;
+    padding:           10px 14px;
+    children: [ prompt, entry ];
+    spacing: 10px;
+}
+
+prompt {
+    text-color: @accent2;
+    font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+entry {
+    placeholder:       "Pesquisar...";
+    placeholder-color: @fg1;
+    text-color:        @fg0;
+}
+
+listview {
+    background-color: transparent;
+    columns:  1;
+    lines:    8;
+    spacing:  4px;
+    scrollbar: false;
+    fixed-height: false;
+}
+
+element {
+    background-color: transparent;
+    text-color:         @fg1;
+    border-radius:      10px;
+    padding:            8px 10px;
+    orientation:        horizontal;
+}
+
+element selected {
+    background-color: @bg2;
+    text-color:         @fg0;
+}
+
+element-icon {
+    size: 22px;
+    vertical-align: 0.5;
+}
+
+element-text {
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+message {
+    background-color: @bg1;
+    border-radius: 10px;
+    padding: 8px;
+}
+
+textbox {
+    text-color: @fg0;
+}
