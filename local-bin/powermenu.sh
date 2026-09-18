@@ -7,7 +7,7 @@ chosen=$(echo -e "$options" | rofi -dmenu -i -p "" -theme ~/.config/rofi/themes/
 
 case "$chosen" in
   *Lock*) blurlock ;;
-  *Suspend*) blurlock && systemctl suspend ;;
+  *Suspend*) i3exit suspend ;;
   *Logout*) i3-msg exit ;;
   *Reboot*) systemctl reboot ;;
   *Shutdown*) systemctl poweroff ;;

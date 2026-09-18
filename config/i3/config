@@ -286,7 +286,7 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id blurlock
 
 # Suspend directly (locks first, then suspends)
-bindsym $mod+Shift+9 exec --no-startup-id blurlock && systemctl suspend
+bindsym $mod+Shift+9 exec --no-startup-id i3exit suspend
 
 # Cycle wallpaper (Omarchy-style)
 bindsym $mod+Shift+w exec --no-startup-id ~/.local/bin/wallpaper-next.sh

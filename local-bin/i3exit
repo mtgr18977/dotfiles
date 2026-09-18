@@ -1,0 +1,45 @@
+#!/bin/sh
+# Shadows /usr/bin/i3exit via $HOME/.local/bin PATH precedence.
+#
+# Fixes a bug in the stock script: it does `blurlock && systemctl suspend`,
+# but blurlock (i3lock) blocks until the screen is unlocked - so suspend
+# would only fire AFTER typing the password back in, defeating the point of
+# a quick suspend shortcut. Here blurlock is started in the background so
+# suspend/hibernate fire right away, and the lock screen is already up by
+# the time the machine wakes.
+
+logind=systemctl
+
+case "$1" in
+    lock)
+        blurlock
+        ;;
+    logout)
+        i3-msg exit
+        ;;
+    switch_user)
+        dm-tool switch-to-greeter
+        ;;
+    suspend)
+        blurlock &
+        sleep 1
+        $logind suspend
+        ;;
+    hibernate)
+        blurlock &
+        sleep 1
+        $logind hibernate
+        ;;
+    reboot)
+        $logind reboot
+        ;;
+    shutdown)
+        $logind poweroff
+        ;;
+    *)
+        echo "== ! i3exit: missing or invalid argument ! =="
+        echo "Try again with: lock | logout | switch_user | suspend | hibernate | reboot | shutdown"
+        exit 2
+esac
+
+exit 0
