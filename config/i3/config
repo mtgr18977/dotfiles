@@ -294,7 +294,7 @@ bindsym $mod+Shift+w exec --no-startup-id ~/.local/bin/wallpaper-next.sh
 # Autostart applications
 exec_always --no-startup-id setxkbmap us intl
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/cat-mountain-range.jpg
+exec --no-startup-id feh --bg-fill "~/Pictures/wallpapers/OSF 022 District Core.png"
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id xfce4-power-manager
