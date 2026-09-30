@@ -298,9 +298,7 @@ exec --no-startup-id feh --bg-fill "$HOME/Pictures/wallpapers/OSF 022 District C
 exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id clipit -d -n
-exec --no-startup-id ~/.local/bin/screentime-tracker.sh
-# exec --no-startup-id blueman-applet
+exec --no-startup-id clipit -d -n# exec --no-startup-id blueman-applet
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
